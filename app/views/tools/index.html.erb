@@ -1,0 +1,7 @@
+
+<% @tools.each do |tool| %>
+  <%= tool.name  %> - <%= tool.quantity %> - <%= tool.price %>
+  <br>
+  <% end %>
+
+<%= link_to "Create New Tool", new_tool_path %>
