@@ -1,3 +1,4 @@
+<div class="tool_info">
 
 <% @tools.each do |tool| %>
   <%= tool.name  %> - <%= tool.quantity %> - <%= tool.price %>
@@ -5,3 +6,4 @@
   <% end %>
 
 <%= link_to "Create New Tool", new_tool_path %>
+</div>
