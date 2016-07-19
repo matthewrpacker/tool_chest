@@ -1,9 +1,9 @@
 <div class="tool_info">
 
 <% @tools.each do |tool| %>
-  <%= tool.name  %> - <%= tool.quantity %> - <%= tool.price %>
-  <br>
+    <%= link_to tool.name, tool_path(tool)  %> - <%= tool.quantity %> - <%= tool.price %>
+  <br><br>
   <% end %>
-
-<%= link_to "Create New Tool", new_tool_path %>
+<br>
+<%= link_to "Create Tool", new_tool_path %>
 </div>

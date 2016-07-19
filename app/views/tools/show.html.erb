@@ -1,2 +1,6 @@
-<%= @tool.name  %> - <%= @tool.quantity %> - <%= @tool.price %>
-<%= link_to "Delete", tool_path(@tool), method: :delete %>
+<h3><%= @tool.name  %></h3>
+Quantity: <%= @tool.quantity %><br>
+Price: <%= @tool.price %><br><br>
+<%= link_to "Edit", edit_tool_path %> &nbsp;
+<%= link_to "Delete", tool_path(@tool), method: :delete %><br><br>
+<%= link_to "Back", tools_path %>
