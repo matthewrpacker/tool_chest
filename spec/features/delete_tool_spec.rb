@@ -10,11 +10,6 @@ describe "Delete a tool" do
     click_on "Delete"
 
     expect(current_path).to eq(tools_path)
-
-    # find(".tool_info").visible?
-
-    within(".tool_info") do
-      expect(page).to have_no_content("Rotary cutter")
-    end
+    expect(page).to have_no_content("Rotary cutter")
   end
 end
