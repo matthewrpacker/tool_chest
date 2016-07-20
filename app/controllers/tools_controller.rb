@@ -5,10 +5,12 @@ class ToolsController < ApplicationController
   end
 
   def create
-    tool = Tool.new(tool_params)
-    if tool.save
+    @tool = Tool.new(tool_params)
+    if @tool.save
+      flash[:notice] = "#{@tool.name} created!"
       redirect_to tools_path
     else
+      flash.now[:error] = @tool.errors.full_messages.join(", ")
       render :new
     end
   end
